@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>등록일시</th>
+            <th>사망자</th>
+            <th>확진자</th>
+            <th>누적의심자</th>
+            <th>누적확진율</th>
+            <th>일일확진자</th>
+            <th>일일사망자</th>
+        </tr>
+        <tr>
+            {% for i in range(0, cnt, 1) %}
+            <tr>
+                <td>{{i+1}}</td>
+                <td>{{result["등록일시"][i]}}</td>
+                <td>{{result["사망자"][i]}}</td>
+                <td>{{result["확진자"][i]}}</td>
+                <td>{{result["누적의심자"][i]}}</td>
+                <td>{{result["누적확진율"][i]}}</td>
+                <td>{{result["일일확진자"][i]}}</td>
+                <td>{{result["일일사망자"][i]}}</td>
+            </tr>            
+            {% endfor %}
+        </tr>
+    </table>    
+</body>
+</html>
